@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: postgres_db
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
+      POSTGRES_DB: masterData
+    ports:
+      - "5432:5432"
